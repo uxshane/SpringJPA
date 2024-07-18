@@ -14,13 +14,27 @@ public class SecurityConfig{
 
     @Bean
     protected SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http.authorizeHttpRequests(
-            authorize -> authorize
-                    .requestMatchers("/", "/hello")
-                    .permitAll()
-                    .anyRequest()
-                    .authenticated()
-        );
+//        http.authorizeHttpRequests(
+////            authorize -> authorize
+////                    .requestMatchers("/",
+////                            "/hello",
+////                            "/api",
+////                            "/api/name",
+////                            "api/request1",
+////                            "api/request2",
+////                            "api/request3",
+////                            "api/variable1/",
+////                            "api/variable2/")
+////                    .permitAll()
+////                    .anyRequest()
+////                    .authenticated()
+////        );
+
+        http
+                .authorizeHttpRequests(
+                        authorize -> authorize
+                                .anyRequest().permitAll()
+                );
 
         return http.build();
     }
