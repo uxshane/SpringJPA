@@ -1,6 +1,6 @@
 package com.minkyu.springjpa.controller;
 
-import com.minkyu.springjpa.dto.MemberDTO;
+import com.minkyu.springjpa.data.dto.MemberDTO;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PutMapping;
