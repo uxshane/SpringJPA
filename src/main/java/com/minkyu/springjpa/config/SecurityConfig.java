@@ -29,12 +29,11 @@ public class SecurityConfig{
 ////                    .anyRequest()
 ////                    .authenticated()
 ////        );
-
         http
+                .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(
                         authorize -> authorize
-                                .anyRequest().permitAll()
-                );
+                                .anyRequest().permitAll());
 
         return http.build();
     }
