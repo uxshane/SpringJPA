@@ -19,8 +19,7 @@ public class ProductDAOImpl implements ProductDAO {
 
     @Override
     public ProductEntity saveProduct(ProductEntity productEntity) {
-        productRepository.save(productEntity);
-        return productEntity;
+       return productRepository.save(productEntity);
     }
 
     @Override
