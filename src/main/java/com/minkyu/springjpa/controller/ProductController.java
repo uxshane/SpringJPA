@@ -2,6 +2,7 @@ package com.minkyu.springjpa.controller;
 
 import com.minkyu.springjpa.data.dto.ProductDTO;
 import com.minkyu.springjpa.service.ProductService;
+import jakarta.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -36,7 +37,7 @@ public class ProductController {
     }
 
     @PostMapping("/product")
-    public ProductDTO createProduct(@RequestBody ProductDTO productDTO) {
+    public ProductDTO createProduct(@Valid @RequestBody ProductDTO productDTO) {
 
         long startTime = System.currentTimeMillis();
 
